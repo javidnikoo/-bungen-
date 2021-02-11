@@ -1,6 +1,6 @@
    
 def conv(number):
-    zahlw = ["Null","ein","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn","elf","zwölf","dreizehn","vierzehn","fünfzehn","sechzehn","siebzehn","achtzehn","nuenzehn"]
+    numberw = ["Null","ein","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn","elf","zwölf","dreizehn","vierzehn","fünfzehn","sechzehn","siebzehn","achtzehn","nuenzehn"]
     zehner = ["","zehn","zwanzig","dreißig","vierzig","fünfzig","sechzig","siebzig","achtzig","neunzig"]
     if number < 0 or number > 9999:
         print("The number is out of the range ")
@@ -12,26 +12,26 @@ def conv(number):
         Z = int( Z % 10)
         E = number % 10
 
-        wort=""
+        word=""
         if (T):
-            wort = zahlw[T] + "tausend"
+            word = numberw[T] + "tausend"
         if (H):
-            wort = wort + zahlw[H] + "hundert"
+            word = word + numberw[H] + "hundert"
         if (Z == 0):
-            wort = wort + zahlw[E]
+            word = word + numberw[E]
         elif  Z == 1:
             Z =  number % 100
-            wort = wort + zahlw[Z]
+            word = word + numberw[Z]
         elif (E == 0):
-            wort = wort + zehner[Z]          
+            word = word + zehner[Z]          
         elif(Z):
-            wort = wort + zahlw[E] + "und" + zahlw[Z] + "zig"
+            word = word + numberw[E] + "und" + numberw[Z] + "zig"
         if  not T and not H and not Z  and E == 1 :
-            wort="eins" 
-    print (wort)
+            word="eins" 
+    print (word)
 
 
 
 
-zahl=int(input("please write your number"))
-conv(zahl)
+input=int(input("please write your number"))
+conv(input)

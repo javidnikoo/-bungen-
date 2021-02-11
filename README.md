@@ -1,3 +1,3 @@
 # übungen
-Dies ist mein Platz für Tagesübung </br>
-001-konvertieren zahlen in worter
+This is my place for daily practice </br>
+001-convert numbers to german words
